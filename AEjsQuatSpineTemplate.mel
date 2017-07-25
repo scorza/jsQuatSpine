@@ -1,0 +1,46 @@
+global proc AEjsQuatSpineTemplate( string $nodeName )
+{
+	editorTemplate -beginScrollLayout;
+
+		editorTemplate -beginLayout "Quat Spine Node Attributes" -collapse 0;
+			AEaddRampControl ( $nodeName + ".stretchRamp");
+			AEaddRampControl ( $nodeName + ".squashRamp");
+			AEaddRampControl ( $nodeName + ".twistRamp");
+		editorTemplate -endLayout;
+
+	editorTemplate -addExtraControls;
+	editorTemplate -endScrollLayout;
+
+	setAttr ($nodeName + ".squashRamp[0].squashRamp_FloatValue") 0.0;
+	setAttr ($nodeName + ".squashRamp[0].squashRamp_Position") 0.0;
+	setAttr ($nodeName + ".squashRamp[0].squashRamp_Interp") 2;
+
+	setAttr ($nodeName + ".squashRamp[1].squashRamp_FloatValue") 1.0;
+	setAttr ($nodeName + ".squashRamp[1].squashRamp_Position") 0.5;
+	setAttr ($nodeName + ".squashRamp[1].squashRamp_Interp") 2;
+	
+	setAttr ($nodeName + ".squashRamp[2].squashRamp_FloatValue") 0.0;
+	setAttr ($nodeName + ".squashRamp[2].squashRamp_Position") 1.0;
+	setAttr ($nodeName + ".squashRamp[2].squashRamp_Interp") 2;
+
+	setAttr ($nodeName + ".stretchRamp[0].stretchRamp_FloatValue") 0.0;
+	setAttr ($nodeName + ".stretchRamp[0].stretchRamp_Position") 0.0;
+	setAttr ($nodeName + ".stretchRamp[0].stretchRamp_Interp") 2;
+
+	setAttr ($nodeName + ".stretchRamp[1].stretchRamp_FloatValue") 1.0;
+	setAttr ($nodeName + ".stretchRamp[1].stretchRamp_Position") 0.5;
+	setAttr ($nodeName + ".stretchRamp[1].stretchRamp_Interp") 2;
+	
+	setAttr ($nodeName + ".stretchRamp[2].stretchRamp_FloatValue") 0.0;
+	setAttr ($nodeName + ".stretchRamp[2].stretchRamp_Position") 1.0;
+	setAttr ($nodeName + ".stretchRamp[2].stretchRamp_Interp") 2;
+
+	setAttr ($nodeName + ".twistRamp[0].twistRamp_FloatValue") 0.0;
+	setAttr ($nodeName + ".twistRamp[0].twistRamp_Position") 0.0;
+	setAttr ($nodeName + ".twistRamp[0].twistRamp_Interp") 1;
+
+	setAttr ($nodeName + ".twistRamp[1].twistRamp_FloatValue") 1.0;
+	setAttr ($nodeName + ".twistRamp[1].twistRamp_Position") 1.0;
+	setAttr ($nodeName + ".twistRamp[1].twistRamp_Interp") 1;
+
+}			
